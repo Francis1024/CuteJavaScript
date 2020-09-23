@@ -1,0 +1,51 @@
+<!--
+ * @Author: ZuoTaiYu
+ * @Date: 2020-09-23 11:43:00
+ * @LastEditTime: 2020-09-23 15:44:50
+ * @LastEditors: ZuoTaiYu
+ * @message: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01.let和const命令</title>
+  </head>
+  <body>
+    <script>
+      // 1.let和const命令
+      // 在ES6中，我们通常使用let表示变量，const表示常量，并且let和const都是块级作用域，且在当前作用域有效不能重复声明。
+      // 1.1.let命令
+      // let命令和var相似，但是let只在代码块内有效
+      // 基础用法
+
+      {
+        let a = 1;
+        let b = 2;
+      }
+
+      // 并且let有以下特点
+      //  - 不存在变量提升：在es6之前，我们声明一个变量一个函数，都会伴随着变量提升的问题，导致世纪开发过程经常出现一些逻辑上的疑惑，按照一般思维习惯，变量都是需要先声明后使用。
+
+      // ver
+      console.log(v1); // undefined
+      var v1 = 2;
+      // 由于变量提升实际代码如下：
+      //   var v1
+      //   console.log(v1);
+      //   v1 = 2
+
+      //   - 不允许重复声明
+      // let和const在相同作用域下，都不能重复声明同一变量，并且不能下在函数内重新声明参数。
+      function f1() {
+          let a = 1
+          var a = 1
+      }
+      function f2() {
+          let a = 1
+          let a = 1
+      }
+    </script>
+  </body>
+</html>
