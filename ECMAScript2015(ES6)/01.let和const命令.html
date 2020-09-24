@@ -1,7 +1,7 @@
 <!--
  * @Author: ZuoTaiYu
  * @Date: 2020-09-23 11:43:00
- * @LastEditTime: 2020-09-23 15:44:50
+ * @LastEditTime: 2020-09-24 12:27:48
  * @LastEditors: ZuoTaiYu
  * @message: 
 -->
@@ -39,12 +39,23 @@
       //   - 不允许重复声明
       // let和const在相同作用域下，都不能重复声明同一变量，并且不能下在函数内重新声明参数。
       function f1() {
-          let a = 1
-          var a = 1
+        let a = 1;
+        var a = 1;
       }
       function f2() {
-          let a = 1
-          let a = 1
+        let a = 1;
+        let a = 1;
+      }
+
+      // 
+      function f3(a1) {
+        let a1;
+      }
+
+      function f4(a2) {
+        {
+          let a2;
+        }
       }
     </script>
   </body>
